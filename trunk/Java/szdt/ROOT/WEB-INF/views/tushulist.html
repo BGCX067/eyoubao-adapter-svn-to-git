@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<#include "inc/global_head.html">
+</head>
+<body>
+	<!--header start-->
+	<div class="header">
+		<div class="topnav">
+			<div class="wrap cf">
+				<div class="fl">
+					<span>欢迎来到深圳地铁文化中心</span>
+				</div>	
+				<div class="fr">
+					<span id="nowTime">今天:2013-03-04 21:00</span>
+					<span>天气冷</span>
+				</div>					
+			</div>	
+		</div>
+		<#include "inc/library_top_nav.html">
+	</div>
+	<!--header end-->
+	<!--containner start-->
+	<div class="containner wrap">
+		<div class="content">
+			<div class="yuyue-box myyuyue-list">
+				<h3>图书清单</h3>
+				<table class="table">
+					<thead>
+						<tr><th class="first">编号</th><th>名称</th><th>位置</th><th>状态</th><th>借出时间</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="first">A10001</th>
+							<td>企业管理中的人的因素 </td>
+							<td>A架</td>
+							<td>借出</td>
+							<td>2012年2月28号</td>						
+						</tr>
+						<tr>
+							<th class="first">A10002</th>
+							<td>智慧人生 </td>
+							<td>A架</td>
+							<td>借出</td>
+							<td>2012年2月29号</td>	
+						</tr>
+						<tr>
+							<th class="first">A10003</th>
+							<td>超越自我</td>
+							<td>B架</td>
+							<td>借出</td>
+							<td>2012年3月12号</td>	
+						</tr>														
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="bottom-nav"></div>						
+	</div>
+	<!--containner end-->
+	<!--footer start-->
+	<div class="footer">
+
+	</div>	
+	<!--footer end-->
+	<#include "inc/global_js.html">
+	<script type="text/javascript">
+		$(".kecheng>ul>li").click(function(){
+			var iNum=$(this).index();
+			$(".kecheng>ul>li").removeClass("active");
+			$(this).addClass("active");
+			$(".kecheng-box").removeClass("active");
+			$(".kecheng-box").eq(iNum).addClass("active");
+		})
+	</script>
+</body>
+</html>

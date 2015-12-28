@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<#include "inc/global_head.html">	
+</head>
+<body>
+	<!--header start-->
+	<#assign module = "BOOKING_LIST" />
+    <#include "inc/column_header.html" />
+	<!--header end-->
+	<!--containner start-->
+	<div class="containner wrap">
+		<div class="content">
+			<div class="yuyue-box myyuyue-list">
+				<h3>我的预约</h3>
+				<table class="table">
+					<thead>
+						<tr><th class="first">项目</th><th>械器编号</th><th>时间</th><th>操作</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="first">乒乓球</th>
+							<td>2号</td>
+							<td>2013年2月28日 19:38</td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<th class="first">台球</th>
+							<td>1号</td>
+							<td>2013年2月28日 19:38</td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+						<th class="first">器械</th>
+							<td>1号</td>
+							<td>2013年2月28日 19:38</td>
+							<td><a></a></td>
+						</tr>														
+					</tbody>
+				</table>
+			</div>
+			<div class="yuyue-box weiyue-list">
+				<h3>违约记录</h3>
+				<table class="table">
+					<thead>
+						<tr><th class="first">时间</th><th>事项</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2013年2月28日 19:38</td>
+							<td>未按时到场</td>
+						</tr>
+						<tr>
+							<td>2013年2月28日 19:38</td>
+							<td>未按时到场</td>
+						</tr>
+						<tr>
+							<td>2013年2月28日 19:38</td>
+							<td>未按时到场</td>
+						</tr>														
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<#include "inc/bottom_nav.html" />				
+	</div>
+	<!--containner end-->
+	<!--footer start-->
+	<div class="footer">
+
+	</div>	
+	<!--footer end-->
+	<#include "inc/global_js.html">
+	<script type="text/javascript">
+		$(".kecheng>ul>li").click(function(){
+			var iNum=$(this).index();
+			$(".kecheng>ul>li").removeClass("active");
+			$(this).addClass("active");
+			$(".kecheng-box").removeClass("active");
+			$(".kecheng-box").eq(iNum).addClass("active");
+		})
+	</script>
+</body>
+</html>

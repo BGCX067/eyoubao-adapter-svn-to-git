@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <#include "inc/global_head.html">
+</head>
+<body>
+	<!--header start-->
+	<div class="header">
+		<div class="topnav">
+			<div class="wrap cf">
+				<div class="fl">
+					<span>欢迎来到深圳地铁文化中心</span>
+				</div>	
+				<div class="fr">
+					<span id="nowTime">今天:2013-03-04 21:00</span>
+					<span>天气冷</span>
+				</div>					
+			</div>	
+		</div>	
+	</div>
+	<!--header end-->
+	<!--containner start-->
+	<div class="containner wrap">
+		<div class="sidebar">
+			<div class="inner">
+				<div class="logo">
+					<img src="images/logo.png" width="164">
+				</div>
+				<ul class="subnav">
+					<li class="jiaban"><a href="${base}/overtime/apply.do">加班申请</a></li>
+					<li class="qingdan last-item"><a href="${base}/library/book_list.do">图书清单</a></li>
+				</ul>
+				<div class="shenqing">
+					<a href="${base}/overtime/records.do"></a>
+				</div>	
+				<div class="jieyue">
+					<a href="${base}/library/borrow_list.do"></a>
+				</div>					
+			</div>	
+		</div>
+		<div class="main">
+			<div class="flash">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="790" height="600">
+				<param name="movie" value="${base}/flash.swf">
+				<param name="quality" value="high">
+				<embed src="${base}/flash.swf" quality="high"
+				 pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="790"
+				 height="600"></embed>
+				</object>				
+			</div>	
+<!-- 			<div class="slider">
+				<ul>
+					<li><a><img src="images/2.png" width="790"></a></li>
+					<li><a><img src="images/1.png" width="790"></a></li>
+					<li><a><img src="images/3.png" width="790"></a></li>
+					<li><a><img src="images/4.png" width="790"></a></li>
+				</ul>
+				<div class="control-btn">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>	
+			</div> -->
+			<div class="cf">
+				<dl class="img-txt">
+					<dt>
+						<img src="images/l1.jpg" width="350">
+					</dt>
+					<dd>
+						<h2>加班申请</h2>
+						<p>员工可以申请在地铁大厦33楼加班，加班环境安静优雅，工作效率高，加班的员工需要提前提出申请，并得到批准，加班时需遵守遵守相关管理制度。 </p>
+						<p class="yuyue"><span class="jbsq"><a href="${base}/overtime/apply.do"></a></span></p>
+					</dd>
+				</dl>
+				<dl class="img-txt even-item">
+					<dt>
+						<img src="images/l2.jpg" width="350">
+					</dt>
+					<dd>
+						<h2>图书馆</h2>
+						<p>图书馆，是搜集、整理、收藏图书资料供人阅览、参考的机构，早在公元前3000年就出现了最早的图书馆，图书馆有保存人类文化遗产、开发信息资源、参与社会教育等职能。</p>
+						<p class="yuyue"><span class="tsg"><a href="${base}/library/book_list.do"></a></span></p>
+					</dd>
+				</dl>								
+			</div>
+			<div class="website">
+				<p>深圳市地铁集团有限公司 版权所有 Copyright © 2011 SHENZHEN METRO CO.,LTD. All Rights</p>
+				<p>建议使用IE7及以上浏览器 粤ICP备11086602号</p>
+			</div>	
+		</div>
+	</div>
+	<!--containner end-->
+	<!--footer start-->
+	<div class="footer">
+
+	</div>	
+	<!--footer end-->
+	<#include "inc/global_js.html">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//简单的首页轮播
+			var iNum=$(".slider>ul>li").length;
+			var iImgWidth=$(".slider>ul>li").width();
+			var oUl=$(".slider>ul");
+			oUl.width(iNum*iImgWidth);
+			var timer=null;
+			var ibtn=0;
+			function run(){
+				oUl.stop().animate({
+					left:-iImgWidth*ibtn
+				},600);
+				$(".control-btn span").removeClass("active");
+				$(".control-btn span").eq(ibtn).addClass("active");			
+			}
+			timer=setInterval(function(){
+				ibtn++;
+				if(ibtn>3){
+					ibtn=0;
+				}
+				run();
+			},3000)
+			$(".control-btn span").click(function(){
+				ibtn=$(this).index();
+				run();
+			})			
+		})
+
+		$(document).ready(function(){
+			//左侧导航跟随滚动
+			function scro(){
+				if($(document).scrollTop()>=40){
+					$(".sidebar .inner").css({position:"fixed",top:0})
+				}else{
+					$(".sidebar .inner").css({position:"static"})
+				}				
+			}
+			scro();
+			$(document).scroll(scro);
+		})
+
+
+	</script>
+</body>
+</html>

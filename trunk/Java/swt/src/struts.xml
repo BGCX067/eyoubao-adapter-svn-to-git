@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="site" extends="struts-default" namespace="/">
+        <action name="index" class="siteAction" method="index">
+            <result type="freemarker" name="success">/WEB-INF/views/site/index.html</result>
+        </action>
+        <action name="forward_register" class="siteAction" method="forwardRegister">
+            <result type="freemarker" name="success">/WEB-INF/views/site/register.html</result>
+        </action>
+        <action name="register" class="siteAction" method="register">
+            <result type="freemarker" name="success">/WEB-INF/views/site/register.html</result>
+        </action>
+        <action name="noshery_list" class="siteAction" method="nosheryList">
+            <result type="freemarker" name="success">/WEB-INF/views/site/noshery_list.html</result>
+        </action>
+        <action name="category_list" class="siteAction" method="categoryList">
+            <result type="freemarker" name="success">/WEB-INF/views/site/category_list.html</result>
+        </action>
+        <action name="cookbook_list" class="siteAction" method="cookbookList">
+            <result type="freemarker" name="success">/WEB-INF/views/site/cookbook_list.html</result>
+        </action>
+    </package>
+    <package name="login" extends="struts-default" namespace="/">
+        <action name="forward_login" class="loginAction" method="forwardLogin">
+            <result type="freemarker" name="success">/WEB-INF/views/login.html</result>
+        </action>
+        <action name="login_success" class="loginAction" method="forwardLoginSuccess">
+            <result type="freemarker" name="success">/WEB-INF/views/index.html</result>
+        </action>
+        <action name="top" class="loginAction" method="top">
+            <result type="freemarker" name="success">/WEB-INF/views/system/layout/top.html</result>
+        </action>
+        <action name="main" class="loginAction" method="main">
+            <result type="freemarker" name="success">/WEB-INF/views/system/layout/main.html</result>
+        </action>
+        <action name="left" class="loginAction" method="left">
+            <result type="freemarker" name="success">/WEB-INF/views/system/layout/left.html</result>
+        </action>
+        <action name="preferred_menu" class="loginAction" method="preferredMenu">
+            <result type="freemarker" name="success">/WEB-INF/views/system/layout/preferred.html</result>
+        </action>
+    </package>
+    <package name="admin" extends="struts-default" namespace="/admin">
+        <action name="user_list" class="adminAction" method="userList">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/user_list.html</result>
+        </action>
+        <action name="delete_user" class="adminAction" method="deleteUser">
+            <result type="redirect" name="success">/admin/user_list.do</result>
+        </action>
+        
+        <!-- 上传 -->
+        <action name="upload" class="adminAction" method="upload">
+            <result type="freemarker" name="success">/WEB-INF/views/common/upload.html</result>
+        </action>
+        
+        <!-- 店铺管理 -->
+        <action name="noshery_list" class="adminAction" method="nosheryList">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/noshery_list.html</result>
+        </action>
+        <action name="forward_add_noshery" class="adminAction" method="forwardAddNoshery">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/noshery_form.html</result>
+        </action>
+        <action name="add_noshery" class="adminAction" method="addNoshery">
+            <result type="redirect" name="success">/admin/noshery_list.do</result>
+        </action>
+        <action name="forward_modify_noshery" class="adminAction" method="forwardModifyNoshery">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/noshery_form.html</result>
+        </action>
+        <action name="modify_noshery" class="adminAction" method="modifyNoshery">
+            <result type="redirect" name="success">/admin/noshery_list.do</result>
+        </action>
+        <action name="delete_noshery" class="adminAction" method="deleteNoshery">
+            <result type="redirect" name="success">/admin/noshery_list.do</result>
+        </action>
+        
+        <!-- 菜单分类 -->
+        <action name="category_list" class="adminAction" method="categoryList">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/category_list.html</result>
+        </action>
+        <action name="forward_add_category" class="adminAction" method="forwardAddCategory">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/category_form.html</result>
+        </action>
+        <action name="add_category" class="adminAction" method="addCategory">
+            <result type="redirect" name="success">/admin/category_list.do</result>
+        </action>
+        <action name="forward_modify_category" class="adminAction" method="forwardModifyCategory">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/category_form.html</result>
+        </action>
+        <action name="modify_category" class="adminAction" method="modifyCategory">
+            <result type="redirect" name="success">/admin/category_list.do</result>
+        </action>
+        <action name="delete_category" class="adminAction" method="deleteCategory">
+            <result type="redirect" name="success">/admin/category_list.do</result>
+        </action>
+        
+        <!-- 菜单管理 -->
+        <action name="cookbook_list" class="adminAction" method="cookbookList">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/cookbook_list.html</result>
+        </action>
+        <action name="forward_add_cookbook" class="adminAction" method="forwardAddCookbook">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/cookbook_form.html</result>
+        </action>
+        <action name="add_cookbook" class="adminAction" method="addCookbook">
+            <result type="redirect" name="success">/admin/cookbook_list.do</result>
+        </action>
+        <action name="forward_modify_cookbook" class="adminAction" method="forwardModifyCookbook">
+            <result type="freemarker" name="success">/WEB-INF/views/system/admin/cookbook_form.html</result>
+        </action>
+        <action name="modify_cookbook" class="adminAction" method="modifyCookbook">
+            <result type="redirect" name="success">/admin/cookbook_list.do</result>
+        </action>
+        <action name="delete_cookbook" class="adminAction" method="deleteCookbook">
+            <result type="redirect" name="success">/admin/cookbook_list.do</result>
+        </action>
+    </package>
+    
+    <package name="user" extends="struts-default" namespace="/user">
+        <action name="shopping_cart" class="userAction" method="shopcart">
+            <result type="freemarker" name="success">/WEB-INF/views/site/shopping_cart.html</result>
+        </action>
+        <action name="booking" class="userAction" method="booking">
+            <result type="redirect" name="success">/user/shopping_cart.do</result>
+        </action>
+        <action name="forward_order" class="userAction" method="forwardOrder">
+            <result type="freemarker" name="success">/WEB-INF/views/site/order_form.html</result>
+        </action>
+        <action name="order" class="userAction" method="order">
+            <result type="redirect" name="success">/login_success.do?innerUri=</result>
+        </action>
+        <action name="order_list" class="userAction" method="orderList">
+            <result type="freemarker" name="success">/WEB-INF/views/system/user/order_list.html</result>
+        </action>
+    </package>
+</struts>

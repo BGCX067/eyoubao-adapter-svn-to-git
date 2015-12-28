@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<#include "inc/global_head.html">	
+</head>
+<body>
+	<!--header start-->
+	<div class="header">
+		<div class="topnav">
+			<div class="wrap cf">
+				<div class="fl">
+					<span>欢迎来到深圳地铁文化中心</span>
+				</div>	
+				<div class="fr">
+					<span id="nowTime">今天:2013-03-04 21:00</span>
+					<span>天气冷</span>
+				</div>					
+			</div>	
+		</div>
+		<#include "inc/library_top_nav.html">
+	</div>
+	<!--header end-->
+	<!--containner start-->
+	<div class="containner wrap">
+		<div class="content">
+			<div class="yuyue-box myyuyue-list">
+				<h3>我的加班申请</h3>
+				<table width="101%" class="table">
+					<thead>
+						<tr><th class="first">时间</th><th>时长</th><th>需要电脑</th><th>审批状态</th><th>操作</th><th>管理员备注</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="first">2013年3月15日 18：00-20：00</th>
+							<td>2小时 </td>
+							<td>是</td>
+							<td>批准</td>
+							<td><a></a></td>
+							<td>电脑资源紧张</td>							
+						</tr>
+						<tr>
+							<th class="first">2013年3月17日 19：00-20：00</th>
+							<td>1小时</td>
+							<td>是</td>
+							<td>批准</td>
+							<td><a></a></td>
+							<td></td>
+						</tr>
+						<tr>
+						<th class="first">2013年3月18日 19：00-20：00</th>
+							<td>2小时</td>
+							<td>是</td>
+							<td>批准</td>
+							<td><a></a></td>
+							<td></td>
+						</tr>														
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="bottom-nav"></div>						
+	</div>
+	<!--containner end-->
+	<!--footer start-->
+	<div class="footer">
+
+	</div>	
+	<!--footer end-->
+	<#include "inc/global_js.html">
+	<script type="text/javascript">
+		$(".kecheng>ul>li").click(function(){
+			var iNum=$(this).index();
+			$(".kecheng>ul>li").removeClass("active");
+			$(this).addClass("active");
+			$(".kecheng-box").removeClass("active");
+			$(".kecheng-box").eq(iNum).addClass("active");
+		})
+	</script>
+</body>
+</html>

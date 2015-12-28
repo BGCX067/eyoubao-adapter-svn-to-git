@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <popup-mapping>
+    <pattern>/BaoMing.aspx</pattern>
+    <pattern>/getNextXH</pattern>
+  </popup-mapping>
+  <wrap-mapping>
+    <pattern>/My97DatePicker.htm</pattern>
+  </wrap-mapping>
+  <rewrite-mapping>
+  </rewrite-mapping>
+  <tms-mapping>
+    <pattern>/BaoMing.aspx</pattern>
+  </tms-mapping>
+  <pms-mapping>
+    <pattern>/getNextXH</pattern>
+  </pms-mapping>
+  <dms-mapping>
+    <pattern>dms.html</pattern>
+  </dms-mapping>
+  <data-provider>
+    <type>sqlite</type>
+    <desc>z:\\student.db</desc>
+  </data-provider>
+  <show-detail>off</show-detail>
+  <is-debug>on</is-debug>
+</config>

@@ -1,0 +1,37 @@
+.navbar {
+    margin-bottom: 2px;
+}
+
+.left-box {
+    width: 100%;
+}
+
+.left-box h2 {
+    color: #fff;
+    font-size: 1.1em;
+    background: #4A8332;
+    margin: 2px auto 0px auto;
+    padding: 0 0 0 15px;
+    line-height: 30px;
+}
+
+.left-box .left-box-content {
+    background: #EBECEB;
+}
+
+.left-container {
+    width: 98%;
+    padding: 0 auto;
+}
+
+.left-container li {
+    border-bottom: 1px solid #ccc;
+}
+
+.footer {
+    text-align: center;
+    background: #EBECEB;
+    font-size: 0.8em;
+    line-height: 0.5em;
+    padding: 10px 0 3px 0;
+}

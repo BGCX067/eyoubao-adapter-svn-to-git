@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    $(function()
+    {
+        <#if username??>
+        $('#anonymous').hide();
+        $('#logined').show();
+        <#else>
+        $('#anonymous').show();
+        $('#logined').hide();
+        </#if>
+    });
+</script>
+<div id="message_bar">
+    <div class="container">
+        <span class="message">
+            食为天便民网服务热线：<strong>400-888-8888</strong>
+        </span>
+        <span class="action">
+            <span id="anonymous" style="display: none;">
+                <a href="${base}/forward_login.do">登录</a>
+                -
+                <a href="${base}/forward_register.do">注册</a>
+            </span>
+            <span id="logined" style="display: none;">
+                您好，${username!?html} [
+                <a href="${base}/logout.do">退出</a>
+                ] |
+                <a href="${base}/login_success.do">会员中心</a>
+                |
+                <a href="${base}/user/shopping_cart.do">购物车</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="container">
+    <ul class="nav">
+        <li>
+            <a href="${base}/index.do">网站首页</a>
+        </li>
+        <li>
+            <a href="${base}/resume/resume_list.jspx">留言板</a>
+        </li>
+    </ul>
+</div>

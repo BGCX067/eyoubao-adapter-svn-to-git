@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <mapping name="SEX">
+    <default>0</default>
+    <entry key="男" value="0" />
+    <entry key="女" value="1" />
+  </mapping>
+  <mapping name="CERTIFICATE_TYPE">
+    <default>0</default>
+    <entry key="身份证" value="0" />
+    <entry key="境外身份证" value="1" />
+  </mapping>
+  <mapping name="APPLY_TYPE">
+    <default>0</default>
+    <entry key="初领" value="0" />
+    <entry key="增学" value="1" />
+  </mapping>
+  <mapping name="APPLY_CAR_TYPE">
+    <default>00</default>
+    <entry key="A1" value="01" />
+    <entry key="A2" value="02" />
+    <entry key="A3" value="03" />
+    <entry key="B1" value="04" />
+    <entry key="B2" value="05" />
+    <entry key="C1" value="06" />
+    <entry key="C2" value="07" />
+    <entry key="C3" value="08" />
+    <entry key="C4" value="09" />
+    <entry key="C5" value="16" />
+    <entry key="D" value="10" />
+    <entry key="E" value="11" />
+    <entry key="F" value="12" />
+    <entry key="M" value="13" />
+    <entry key="N" value="14" />
+    <entry key="P" value="15" />
+  </mapping>
+  <mapping name="ALLOWED_CAR_TYPE">
+    <default>无</default>
+    <entry key="A1" value="A1" />
+    <entry key="A2" value="A2" />
+    <entry key="A3" value="A3" />
+    <entry key="B1" value="B1" />
+    <entry key="B2" value="B2" />
+    <entry key="C1" value="C1" />
+    <entry key="C2" value="C2" />
+    <entry key="C3" value="C3" />
+    <entry key="C4" value="C4" />
+    <entry key="C5" value="C5" />
+    <entry key="D" value="D" />
+    <entry key="E" value="E" />
+    <entry key="F" value="F" />
+    <entry key="M" value="M" />
+    <entry key="N" value="N" />
+    <entry key="P" value="P" />
+  </mapping>
+  <mapping name="NATIONNALITY">
+    <default>0</default>
+    <entry key="中国大陆" value="0" />
+  </mapping>
+  <mapping name="AREA">
+    <default>0</default>
+  </mapping>
+  <mapping name="CENSUS_REGISTER">
+    <default>0</default>
+    <entry key="本地" value="0" />
+    <entry key="外地" value="1" />
+  </mapping>
+  <mapping name="DISTRICT">
+    <entry key="户县" value="户　县" />
+  </mapping>
+  <mapping name="DISTINGUISH">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="AUDITION">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="UPPER_LIMB">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="LEFT_LOWER_LIMB">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="RIGHT_LOWER_LIMB">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="NECK">
+    <entry key="正常" value="合格" />
+    <entry key="不正常" value="不合格" />
+  </mapping>
+  <mapping name="CHECK_HOSPITAL">
+    <default>00</default>
+    <entry key="苏州市体检中心浒关分站" value="00" />
+    <entry key="苏州第一人民医院" value="01" />
+    <entry key="苏州第二人民医院" value="02" />
+    <entry key="吴江市驾驶员适应性检测站" value="03" />
+    <entry key="苏州大学第一附属医院" value="04" />
+    <entry key="苏州大学第二附属医院" value="05" />
+    <entry key="苏州第三人民医院" value="06" />
+    <entry key="苏州第四人民医院" value="07" />
+    <entry key="苏州第五人民医院" value="08" />
+    <entry key="苏州第六人民医院" value="09" />
+    <entry key="苏州第七人民医院" value="10" />
+    <entry key="苏州市中医院" value="11" />
+    <entry key="苏州市体检中心" value="12" />
+    <entry key="苏州市九龙医院" value="13" />
+    <entry key="解放军100医院" value="14" />
+    <entry key="苏州市吴中区人民医院" value="15" />
+    <entry key="苏州市吴中区红十字医院" value="16" />
+    <entry key="苏州市相城区人民医院" value="17" />
+    <entry key="常熟第二人民医院机动车驾驶员体检中心" value="18" />
+    <entry key="太仓市机动车驾驶员体检中心" value="19" />
+    <entry key="昆山市驾驶适应性检测站" value="20" />
+    <entry key="吴江市驾驶适应性检测站" value="21" />
+    <entry key="张家港卫生局体检中心" value="22" />
+    <entry key="昆山市中医院" value="23" />
+    <entry key="常熟市第一人民医院" value="24" />
+    <entry key="常熟市第二人民医院" value="25" />
+    <entry key="常熟市第三人民医院" value="26" />
+    <entry key="常熟市中医院" value="27" />
+    <entry key="昆山市玉山医院" value="28" />
+    <entry key="昆山市第一人民医院" value="29" />
+    <entry key="张家港第一人民医院" value="30" />
+    <entry key="张家港第二人民医院" value="31" />
+    <entry key="张家港中医院" value="32" />
+    <entry key="太仓市第一人民医院" value="33" />
+    <entry key="太仓市第二人民医院" value="34" />
+    <entry key="太仓市第三人民医院" value="35" />
+    <entry key="吴江市第一人民医院" value="36" />
+    <entry key="吴江市第二人民医院" value="37" />
+    <entry key="吴江市中医院" value="38" />
+    <entry key="苏州市吴中中医院" value="39" />
+    <entry key="江苏盛泽医院" value="40" />
+    <entry key="苏州市市立医院北区" value="41" />
+    <entry key="苏州市市立医院东区" value="42" />
+    <entry key="苏州市市立医院总部" value="43" />
+    <entry key="苏州市吴中体检中心" value="44" />
+    <entry key="苏州大学附属第一医院" value="50" />
+    <entry key="苏州大学附属第二医院" value="51" />
+    <entry key="苏州市中医医院" value="52" />
+    <entry key="苏州九龙医院" value="53" />
+    <entry key="中国人民解放军100医院" value="54" />
+    <entry key="苏州市吴中人民医院" value="55" />
+    <entry key="苏州市相城人民医院" value="56" />
+    <entry key="苏州市立医院北区" value="57" />
+    <entry key="苏州市立医院东区" value="58" />
+    <entry key="苏州市立医院本部" value="59" />
+    <entry key="吴江市中医医院吴江市第二人民医院" value="60" />
+    <entry key="苏州化工职业病防治院" value="61" />
+    <entry key="苏州永鼎医院" value="62" />
+    <entry key="苏州市相城区第三人民医院" value="63" />
+    <entry key="苏州高新区人民医院" value="64" />
+  </mapping>
+  <mapping name="ENROLL_SITE">
+    <default>0</default>
+  </mapping>
+</mappings>

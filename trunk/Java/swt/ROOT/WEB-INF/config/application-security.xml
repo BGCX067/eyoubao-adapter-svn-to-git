@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security" xmlns:b="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+    <http auto-config="true">
+        <form-login login-page="/forward_login.do" login-processing-url="/login.do" default-target-url="/login_success.do"
+            always-use-default-target="true" />
+        <logout logout-url="/logout.do" logout-success-url="/forward_login.do" />
+        <custom-filter ref="authenticationFilter" before="FILTER_SECURITY_INTERCEPTOR" />
+        <session-management>
+            <concurrency-control max-sessions="1" expired-url="/forward_login.do" />
+        </session-management>
+    </http>
+    <b:bean id="authenticationFilter" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+        <b:property name="authenticationManager" ref="authenticationManager" />
+        <b:property name="accessDecisionManager" ref="accessDecisionManager" />
+        <b:property name="securityMetadataSource" ref="securityMetadataSource" />
+    </b:bean>
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailsProvider">
+            <password-encoder ref="passwordEncoder"></password-encoder>
+        </authentication-provider>
+    </authentication-manager>
+</b:beans>

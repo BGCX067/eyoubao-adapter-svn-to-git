@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <mapping name="DISTRICT">
+    <default>320501</default>
+    <entry key="市辖区" value="320501" />
+    <entry key="沧浪区" value="320501" />
+    <entry key="平江区" value="320501" />
+    <entry key="虎丘区" value="320505" />
+    <entry key="吴中区" value="320506" />
+    <entry key="相城区" value="320507" />
+    <entry key="姑苏区" value="320508" />
+    <entry key="吴江市" value="320509" />
+    <entry key="常熟市" value="320581" />
+    <entry key="张家港" value="320582" />
+    <entry key="张家港市" value="320582" />
+    <entry key="昆山市" value="320583" />
+    <entry key="太仓市" value="320585" />
+    <entry key="吴县市" value="320586" />
+    <entry key="旅游度假区" value="320593" />
+    <entry key="工业园区" value="320594" />
+    <entry key="江苏省苏州市高新开发区" value="320594" />
+  </mapping>
+  <mapping name="CONTACT_AREA">
+    <default>320501</default>
+    <entry key="市辖区" value="320501" />
+    <entry key="沧浪区" value="320501" />
+    <entry key="平江区" value="320501" />
+    <entry key="虎丘区" value="320505" />
+    <entry key="吴中区" value="320506" />
+    <entry key="相城区" value="320507" />
+    <entry key="姑苏区" value="320508" />
+    <entry key="吴江市" value="320509" />
+    <entry key="常熟市" value="320581" />
+    <entry key="张家港" value="320582" />
+    <entry key="张家港市" value="320582" />
+    <entry key="昆山市" value="320583" />
+    <entry key="太仓市" value="320585" />
+    <entry key="吴县市" value="320586" />
+    <entry key="旅游度假区" value="320593" />
+    <entry key="工业园区" value="320594" />
+    <entry key="江苏省苏州市高新开发区" value="320594" />
+  </mapping>
+</mappings>

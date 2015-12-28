@@ -1,0 +1,27 @@
+<div class="bottom-nav">
+    <#if module?? && "APPARATUS" == module>
+    <a class="active" href="${base}/booking/apparatus.do">器械预约</a>
+    <#else>
+    <a href="${base}/booking/apparatus.do">器械预约</a>
+    </#if>
+    <#if module?? && "PINGPONG" == module>
+    <a class="active" href="${base}/booking/pingpong.do">乒乓球预约</a>
+    <#else>
+    <a href="${base}/booking/pingpong.do">乒乓球预约</a>
+    </#if>
+    <#if module?? && "BILLIARDS" == module>
+    <a class="active" href="${base}/booking/billiards.do">台球预约</a>
+    <#else>
+    <a href="${base}/booking/billiards.do">台球预约</a>
+    </#if>
+    <#if module?? && "YOGA" == module>
+    <a class="active" href="${base}/booking/yoga.do">瑜伽预约</a>
+    <#else>
+    <a href="${base}/booking/yoga.do">瑜伽预约</a>
+    </#if>
+    <#if module?? && "BOOKING_LIST" == module>
+    <a class="active" href="${base}/booking/booking_list.do">我的预约</a>
+    <#else>
+    <a href="${base}/booking/booking_list.do">我的预约</a>
+    </#if>
+</div>

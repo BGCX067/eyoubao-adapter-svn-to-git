@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<#import "../inc/common.ftl" as c>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${base}/css/global.css" type="text/css" rel="Stylesheet" />
+<script src="${thirdparty}/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function()
+    {
+        
+    });
+</script>
+<title>${system_name}</title>
+</head>
+<body>
+    <div class="list-container">
+        <h2>
+            <label>会员列表</label>
+        </h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <td>用户名</td>
+                    <td>姓名</td>
+                    <td>联系电话</td>
+                    <td>电子邮箱</td>
+                    <td>联系地址</td>
+                    <td class="operation">操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <#list pm.pagination.records as record>
+                <tr>
+                    <td>${record.username!?html}</td>
+                    <td>${(record.userArchive.name)!?html}</td>
+                    <td>${(record.userArchive.phone)!?html}</td>
+                    <td>${(record.userArchive.email)!?html}</td>
+                    <td>${(record.userArchive.address)!?html}</td>
+                    <td>
+                        <a href="${base}/admin/delete_user.do?id=${record.id}">删除</a>
+                    </td>
+                </tr>
+                </#list>
+                <tr>
+                    <td colspan="6">
+                        <@c.pagination model = pm />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<#include "inc/global_head.html">
+</head>
+<body>
+    <!--header start-->
+    <div class="header">
+        <div class="topnav">
+            <div class="wrap cf">
+                <div class="fl">
+                    <span>欢迎来到深圳地铁文化中心</span>
+                </div>
+                <div class="fr">
+                    <span id="nowTime"></span>
+                    <span>天气冷</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+    <!--containner start-->
+    <div class="containner wrap">
+        <div class="sidebar">
+            <div class="inner">
+                <div class="logo">
+                    <img src="${base}/images/logo.png" width="164">
+                </div>
+                <ul class="subnav">
+                    <li class="jixie">
+                        <a href="${base}/booking/apparatus.do">器械预约</a>
+                    </li>
+                    <li class="pp">
+                        <a href="${base}/booking/pingpong.do">乒乓球预约</a>
+                    </li>
+                    <li class="taiqiu">
+                        <a href="${base}/booking/billiards.do">台球预约</a>
+                    </li>
+                    <li class="yujia last-item">
+                        <a href="${base}/booking/yoga.do">瑜伽预约</a>
+                    </li>
+                </ul>
+                <div class="myorder">
+                    <a href="${base}/booking/booking_list.do"></a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="flash">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="790" height="600">
+                    <param name="movie" value="flash.swf">
+                    <param name="quality" value="high">
+                    <embed src="${base}/flash.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+                        type="application/x-shockwave-flash" width="790" height="600"></embed>
+                </object>
+            </div>
+            <!-- 			<div class="slider">
+				<ul>
+					<li><a><img src="${base}/images/2.png" width="790"></a></li>
+					<li><a><img src="${base}/images/1.png" width="790"></a></li>
+					<li><a><img src="${base}/images/3.png" width="790"></a></li>
+					<li><a><img src="${base}/images/4.png" width="790"></a></li>
+				</ul>
+				<div class="control-btn">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>	
+			</div> -->
+            <div class="cf">
+                <dl class="img-txt">
+                    <dt>
+                        <img src="${base}/images/b01.jpg" width="350">
+                    </dt>
+                    <dd>
+                        <h2>器械</h2>
+                        <p>器械包括跑步机、单机、杠铃、划船机、臀部训练器等，可以锻炼心肺、力量、协 调性等。</p>
+                        <p class="yuyue">
+                            <span>
+                                <a href="${base}/booking/apparatus.do"></a>
+                            </span>
+                        </p>
+                    </dd>
+                </dl>
+                <dl class="img-txt even-item">
+                    <dt>
+                        <img src="${base}/images/b02.jpg" width="350">
+                    </dt>
+                    <dd>
+                        <h2>兵兵球</h2>
+                        <p>两张乒乓球台，可多人预约。比赛以11分为一局（曾经长期实行21分制，最早甚至出现过100分制）采用五局三胜（团体）或七局四胜制（单项）。比赛分团体、单项（男单、女单，男双、女双、混双）。</p>
+                        <p class="yuyue">
+                            <span>
+                                <a href="${base}/booking/pingpong.do"></a>
+                            </span>
+                        </p>
+                    </dd>
+                </dl>
+                <dl class="img-txt">
+                    <dt>
+                        <img src="${base}/images/b03.jpg" width="350">
+                    </dt>
+                    <dd>
+                        <h2>台球</h2>
+                        <p>在的台球已发展成为多种多样：有中式八球、俄式落袋台球、英式落袋台球、开伦台球、美式落袋台球和斯诺克台球，其中斯诺克最为普遍，而且被官方认可，已成为一项比赛项目。 。</p>
+                        <p class="yuyue">
+                            <span>
+                                <a href="${base}/booking/billiards.do"></a>
+                            </span>
+                        </p>
+                    </dd>
+                </dl>
+                <dl class="img-txt even-item">
+                    <dt>
+                        <img src="${base}/images/b04.jpg" width="350">
+                    </dt>
+                    <dd>
+                        <h2>瑜伽</h2>
+                        <p>瑜伽古老、优美富于艺术感的独特的姿势训练。任何参加者，无论男女老少，高矮胖瘦，都能够在柔韧性和力量方面大有收获。在缓慢动听的音乐中，舒缓精神压力，让参与者的生理、心理、情感和精神方面有很，接受团体预约</p>
+                        <p class="yuyue">
+                            <span>
+                                <a href="${base}/booking/yoga.do"></a>
+                            </span>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="website">
+                <p>深圳市地铁集团有限公司 版权所有 Copyright © 2011 SHENZHEN METRO CO.,LTD. All Rights</p>
+                <p>建议使用IE7及以上浏览器 粤ICP备11086602号</p>
+            </div>
+        </div>
+    </div>
+    <!--containner end-->
+    <!--footer start-->
+    <div class="footer"></div>
+    <!--footer end-->
+    <#include "inc/global_js.html">
+    <script type="text/javascript">
+                    $(document).ready(function()
+                    {
+                        //简单的首页轮播
+                        var iNum = $(".slider>ul>li").length;
+                        var iImgWidth = $(".slider>ul>li").width();
+                        var oUl = $(".slider>ul");
+                        oUl.width(iNum * iImgWidth);
+                        var timer = null;
+                        var ibtn = 0;
+                        function run()
+                        {
+                            oUl.stop().animate({
+                                left : -iImgWidth * ibtn
+                            }, 600);
+                            $(".control-btn span").removeClass("active");
+                            $(".control-btn span").eq(ibtn).addClass("active");
+                        }
+                        timer = setInterval(function()
+                        {
+                            ibtn++;
+                            if (ibtn > 3)
+                            {
+                                ibtn = 0;
+                            }
+                            run();
+                        }, 3000)
+                        $(".control-btn span").click(function()
+                        {
+                            ibtn = $(this).index();
+                            run();
+                        })
+                    })
+
+                    $(document).ready(function()
+                    {
+                        //左侧导航跟随滚动
+                        function scro()
+                        {
+                            if ($(document).scrollTop() >= 40)
+                            {
+                                $(".sidebar .inner").css({
+                                    position : "fixed",
+                                    top : 0
+                                })
+                            } else
+                            {
+                                $(".sidebar .inner").css({
+                                    position : "static"
+                                })
+                            }
+                        }
+                        scro();
+                        $(document).scroll(scro);
+                    })
+                </script>
+</body>
+</html>

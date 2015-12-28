@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <#include "inc/global_head.html">
+</head>
+<body>
+    <!--header start-->
+    <#assign module = "BILLIARDS" />
+    <#include "inc/column_header.html" />
+    <!--header end-->
+    <!--containner start-->
+    <div class="containner wrap">
+        <div class="content">
+            <div class="title">
+                <h1>美式台球</h1>
+                <p>美式台球（十六彩球）：美式台球在我国普及最广，玩法主要有：轮换球、8号球、14-1台球、换击球、见子打子、定球打法</p>
+            </div>
+            <dl class="jianjie cf">
+                <dt><img src="${base}/images/taiqiu-banner.jpg"></dt>
+                <dd><p>
+1.开球选手在D形区内任意点上开球，依规则不按顺序，必须指球定袋把分属自己的目标球全部击落以后，才有权击打“8”号球，无犯规情况下击落“8”号球者为赢得此局。
+2.开球后，选手在一局内每一击球，必须有一个以上的球（包括主球）碰岸，否则判犯规。
+                </p></dd>
+            </dl>
+            <div class="kecheng">
+                <ul class="cf">
+                    <li class="active">今天</li>
+                    <li>明天</li>
+                    <li>后天</li>
+                </ul>
+                <div class="kecheng-box active">
+                    <@m.booking_table data = us_data_0 date_interval = 0 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = us_data_1 date_interval = 1 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = us_data_2 date_interval = 2 />
+                </div>
+            </div>
+            <div class="title">
+                <h1>英式台球</h1>
+                <p>斯诺克，台球的一种。满分为147分</p>
+            </div>
+            <dl class="jianjie cf">
+                <dt><img src="${base}/images/taiqiu-banner.jpg"></dt>
+                <dd><p>
+现在流行的斯诺克台球一共有22只球。其中母球（白球）1只，目标球21只。目标球中：红球15只各1分；黄球1只2分；绿球1只3分；咖啡球1只4分；蓝球1只5分；粉球1只6分，黑球1只7分。
+                </p></dd>
+            </dl>
+            <div class="kecheng">
+                <ul class="cf">
+                    <li class="active">今天</li>
+                    <li>明天</li>
+                    <li>后天</li>
+                </ul>
+                <div class="kecheng-box active">
+                    <@m.booking_table data = en_data_0 date_interval = 0 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = en_data_1 date_interval = 1 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = en_data_2 date_interval = 2 />
+                </div>
+            </div>
+            <div class="fanhui-btn cf">
+                <span><a href="javascript:history.go(-1);"></a></span>
+            </div>
+            <div class="zhuyi cf">
+                <dl>
+                    <dt>操作说明</dt>
+                    <dd>
+                        1.黄色表示已被预约<br />
+                        2.绿色表示设备空闲<br />
+                        3.预定请点绿色块<br />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>注意事项</dt>
+                    <dd>
+                        1.必须穿运动服装和鞋子<br />
+                        2.不可以饮酒<br />
+                        3.不可以携带亲友<br />
+                    </dd>
+                </dl>
+            </div>
+            <#include "inc/rule.html" />
+        </div>
+        <#include "inc/bottom_nav.html" />
+    </div>
+    <!--containner end-->
+    <!--footer start-->
+    <div class="footer">
+    </div>
+    <!--footer end-->
+    <#include "inc/global_js.html">
+    <#include "inc/agreement.html" />
+    <script type="text/javascript">
+    var _CurrentTd = null;
+    var callback = function(rsp){
+        if (rsp.success) {
+            $("#divConfirm").hide();
+            var text = rsp.bookingable ? '可预约 ' : '已预约 ';
+            if (rsp.count > 1)
+            {
+                text += rsp.records;
+                text += '/'
+                text += rsp.count;
+            }
+            _CurrentTd.text(text);
+            
+            if (!rsp.bookingable)
+                {
+                _CurrentTd.addClass("active")
+                }
+        } else {
+            alert(rsp.message);
+        }
+    }
+    
+    $(".kecheng>ul>li").click(function(){
+        var iNum=$(this).index();
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(this).parent().siblings().removeClass("active");
+        $(this).parent().siblings().eq(iNum).addClass("active");
+    });
+    
+    $(".kecheng-box>table>tbody>tr>td").click(function () {
+        _CurrentTd = $(this);
+        if (!$(this).hasClass("active")) {
+            $("#divConfirm").show();
+        }
+    });
+    </script>
+</body>
+</html>

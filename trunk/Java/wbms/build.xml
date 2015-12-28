@@ -1,0 +1,27 @@
+<project name="wbms" default="jar">
+    <path id="classpath">
+        <fileset dir="./lib">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <target name="clean">
+        <delete dir="./build" />
+    </target>
+    <target name="init" depends="clean">
+        <mkdir dir="./build/classes" />
+        <mkdir dir="./build/dist" />
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="./src" classpathref="classpath" destdir="./build/classes" debug="true" encoding="UTF-8" />
+        <copy todir="./build/classes">
+            <fileset dir="./src">
+                <exclude name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    <target name="jar" depends="compile">
+        <jar destfile="./build/dist/wbms-1.0.0.jar" basedir="./build/classes">
+        </jar>
+    </target>
+</project>

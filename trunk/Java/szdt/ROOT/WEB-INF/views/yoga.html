@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <#include "inc/global_head.html">
+</head>
+<body>
+    <!--header start-->
+    <#assign module = "YOGA" />
+    <#include "inc/column_header.html" />
+    <!--header end-->
+    <!--containner start-->
+    <div class="containner wrap">
+        <div class="content">
+            <div class="title">
+                <h1>
+                    瑜伽</h1>
+                <p>
+                    瑜伽场地只接受团体预约</p>
+            </div>
+            <dl class="jianjie cf">
+                <dt>
+                    <img src="${base}/images/yujia-banner.jpg"></dt>
+                <dd>
+                    <p>
+                        
+“瑜伽”这个词，是从印度梵语“yug”或“yuj”而来，其含意为“一致”“结合”或“和谐”。瑜伽是一个通过提升意识，帮助人们充分发挥潜能的哲学体系及其指导下的运动体系。瑜伽姿势是一个运用古老而易于掌握的方法，提高人们生理、心理、情感和精神方面的能力，是一种达到身体、心灵与精神和谐统一的运动形式。
+                    </p>
+                </dd>
+            </dl>
+            <div class="kecheng">
+                <ul class="cf">
+                    <li class="active">今天</li>
+                    <li>明天</li>
+                    <li>后天</li>
+                </ul>
+                <div class="kecheng-box active">
+                    <@m.booking_table data = data_0 date_interval = 0 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_1 date_interval = 1 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_2 date_interval = 2 />
+                </div>
+            </div>
+            <div class="fanhui-btn cf">
+                <span><a href="javascript:history.go(-1);"></a></span>
+            </div>
+            <div class="zhuyi cf">
+                <dl>
+                    <dt>操作说明</dt>
+                    <dd>
+                        1.黄色表示已被预约<br />
+                        2.绿色表示设备空闲<br />
+                        3.预定请点绿色块<br />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>注意事项</dt>
+                    <dd>
+                        1.必须穿运动服装和鞋子<br />
+                        2.不可以饮酒<br />
+                        3.不可以携带亲友<br />
+                    </dd>
+                </dl>
+            </div>
+            <#include "inc/rule.html" />
+        </div>
+        <#include "inc/bottom_nav.html" />
+    </div>
+    <!--containner end-->
+    <!--footer start-->
+    <div class="footer">
+    </div>
+    <!--footer end-->
+    <#include "inc/global_js.html">
+    <#include "inc/agreement.html" />
+    <script type="text/javascript">
+    var _CurrentTd = null;
+    var callback = function(rsp){
+        if (rsp.success) {
+            $("#divConfirm").hide();
+            var text = rsp.bookingable ? '可预约 ' : '已预约 ';
+            if (rsp.count > 1)
+            {
+                text += rsp.records;
+                text += '/'
+                text += rsp.count;
+            }
+            _CurrentTd.text(text);
+            
+            if (!rsp.bookingable)
+                {
+                _CurrentTd.addClass("active")
+                }
+        } else {
+            alert(rsp.message);
+        }
+    }
+    
+    $(".kecheng>ul>li").click(function () {
+        var iNum = $(this).index();
+        $(".kecheng>ul>li").removeClass("active");
+        $(this).addClass("active");
+        $(".kecheng-box").removeClass("active");
+        $(".kecheng-box").eq(iNum).addClass("active");
+    });
+
+    //指定时间段打开预计窗口
+    $(".kecheng-box>table>tbody>tr>td").click(function () {
+        _CurrentTd = $(this);
+        if (!$(this).hasClass("active")) {
+            $("#divConfirm").show();
+        }
+    });
+    </script>
+</body>
+</html>

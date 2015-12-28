@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <mapping name="SEX">
+    <default>M</default>
+    <entry key="男" value="M" />
+    <entry key="女" value="F" />
+  </mapping>
+  <mapping name="CERTIFICATE_TYPE">
+    <default>A</default>
+    <entry key="身份证" value="A" />
+    <entry key="境外身份证" value="F" />
+  </mapping>
+  <mapping name="APPLY_TYPE">
+    <default>1</default>
+    <entry key="初领" value="1" />
+    <entry key="增学" value="2" />
+  </mapping>
+  <mapping name="APPLY_CAR_TYPE">
+    <default>C1</default>
+    <entry key="A1" value="A1" />
+    <entry key="A2" value="A2" />
+    <entry key="A3" value="A3" />
+    <entry key="B1" value="B1" />
+    <entry key="B2" value="B2" />
+    <entry key="C1" value="C1" />
+    <entry key="C2" value="C2" />
+    <entry key="C3" value="C3" />
+    <entry key="C4" value="C4" />
+    <entry key="C5" value="C5" />
+    <entry key="D" value="D" />
+    <entry key="E" value="E" />
+    <entry key="F" value="F" />
+    <entry key="M" value="M" />
+    <entry key="N" value="N" />
+    <entry key="P" value="P" />
+  </mapping>
+  <mapping name="ALLOWED_CAR_TYPE">
+    <entry key="A1" value="A1" />
+    <entry key="A2" value="A2" />
+    <entry key="A3" value="A3" />
+    <entry key="B1" value="B1" />
+    <entry key="B2" value="B2" />
+    <entry key="C1" value="C1" />
+    <entry key="C2" value="C2" />
+    <entry key="C3" value="C3" />
+    <entry key="C4" value="C4" />
+    <entry key="C5" value="C5" />
+    <entry key="D" value="D" />
+    <entry key="E" value="E" />
+    <entry key="F" value="F" />
+    <entry key="M" value="M" />
+    <entry key="N" value="N" />
+    <entry key="P" value="P" />
+  </mapping>
+  <mapping name="NATIONNALITY">
+    <default>156</default>
+    <entry key="中国大陆" value="156" />
+  </mapping>
+  <mapping name="AREA">
+    <default>320500</default>
+  </mapping>
+  <mapping name="CONTACT_AREA">
+    <default>320500</default>
+  </mapping>
+  <mapping name="CENSUS_REGISTER">
+    <default>A</default>
+    <entry key="本地" value="A" />
+    <entry key="外地" value="B" />
+  </mapping>
+  <mapping name="DISTINGUISH">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="AUDITION">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="UPPER_LIMB">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="LEFT_LOWER_LIMB">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="RIGHT_LOWER_LIMB">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="NECK">
+    <default>1</default>
+    <entry key="正常" value="1" />
+  </mapping>
+  <mapping name="ENROLL_SITE">
+    <default>0</default>
+  </mapping>
+  <mapping name="ENROLL_TYPE">
+    <default>1</default>
+    <entry key="驾校报名" value="1" />
+    <entry key="教练员推荐" value="2" />
+  </mapping>
+</mappings>

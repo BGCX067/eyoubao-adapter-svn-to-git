@@ -1,0 +1,41 @@
+<div class="xieyi" id="divConfirm">
+    <h3>预约协议</h3>
+    <div class="xieyi-mian">
+        <p>
+            电子图书阅览室管理制度<br /> 1、凡需要进行电子阅览的公司员工应凭员工证上机阅览，可以进入电子图书馆网页，可以使用图书数据库和电子图书及其它网上信息。<br /> 2、
+            要爱护室内软硬件设备，严禁涂写、刻画及擅自改变计算机系统设置。自觉维护室内卫生，室内严禁吸烟和随地吐痰，不得将食品、饮料等带入阅览室。<br /> 3、阅览室内要保持安静，读者在室内不得大声喧哗。<br /> 4、本室陈列书报，只供公司员工在阅览室阅览，一律不外借。<br />
+            5、爱护公共财物。室内所有桌、椅等设备及展阅的书籍、报刊、杂志等，不准随意搬动、损坏、涂划、撕页和偷拿，违者按原价三倍赔罚。<br />
+            6、设备的使用须严格执行操作规程，出现设备故障，阅读人员应立即向管理人员报告。未经管理人员许可，不得随意改变计算机系统设置。注意用电安全，使用结束后，应及时关闭电源。<br /> 7、通过软盘、光盘、U盘、便携硬盘等存储介质存储数据前，应经过检测确认无有害信息后，方可使用。<br />
+            8、因违反操作规程造成设备损坏，当事人要承担相应经济赔偿责任。<br /> 9、电子阅览室开放时间 (晚上18点-21点。周六、周日全天)，员工应遵守本室开放时间和规定，违者暂停阅览资格。<br />
+        </p>
+    </div>
+    <div class="xieyi-btn">
+        <a class="btn ok" id="btnOk" style="cursor: pointer"></a>
+        <a class="btn no" id="btnNo" style="cursor: pointer"></a>
+        <!-- <a class="finish btn"></a><a class="continue btn"></a> -->
+    </div>
+    <span id="btnClose" class="close" style="cursor: pointer"></span>
+</div>
+<script type="text/javascript">
+<!--
+    $(function()
+    {
+        $("#divConfirm").hide();
+
+        $("#btnClose").click(function()
+        {
+            $("#divConfirm").hide();
+        });
+
+        $("#btnNo").click(function()
+        {
+            $("#divConfirm").hide();
+        });
+
+        $("#btnOk").click(function()
+        {
+            callback();
+        });
+    });
+//-->
+</script>

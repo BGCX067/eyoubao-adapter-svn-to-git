@@ -1,0 +1,8 @@
+D:\VisualStudio\Projects\ContextMenu\Debug\Resource\OpenImage.htm
+D:\VisualStudio\Projects\ContextMenu\Debug\CSCustomIEContextMenu.dll
+D:\VisualStudio\Projects\ContextMenu\Debug\CSCustomIEContextMenu.pdb
+D:\VisualStudio\Projects\ContextMenu\CSCustomIEContextMenu\obj\Debug\ResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ContextMenu\CSCustomIEContextMenu\obj\Debug\Interop.SHDocVw.dll
+D:\VisualStudio\Projects\ContextMenu\CSCustomIEContextMenu\obj\Debug\CSCustomIEContextMenu.csproj.ResolveComReference.cache
+D:\VisualStudio\Projects\ContextMenu\CSCustomIEContextMenu\obj\Debug\CSCustomIEContextMenu.dll
+D:\VisualStudio\Projects\ContextMenu\CSCustomIEContextMenu\obj\Debug\CSCustomIEContextMenu.pdb

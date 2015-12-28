@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+
+.top-container {
+    width: 100%;
+    height: 40px;
+    background: url('img/top_bg.gif');
+    overflow: hidden;
+    zoom: 1;
+    color: #FFF;
+}
+
+.top-container .logo {
+    width: 300px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 25px;
+}
+
+.top-container .message {
+    width: 300px;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 45px;
+}
+
+.top-container .message a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.top-container .message a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.top-container .message a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.top-container .message a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.left-body {
+    background: url('img/left_bg.gif');
+}
+
+.left-content {
+    width: 180px;
+    text-align: center;
+    overflow: hidden;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.left-menu {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.left-menu li label {
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #CCC;
+}
+
+.left-menu li ul li {
+    color: #FFF;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+}
+
+.left-menu li ul li a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.left-menu li ul li a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.left-menu li ul li a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.left-menu li ul li a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+ul.form {
+    width: 95%;
+    margin: 15px auto;
+    border: 0;
+    padding: 0;
+    border-bottom: 1px solid #BBBEC3;
+}
+
+ul.form li {
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid #BBBEC3;
+    border-left: 1px solid #BBBEC3;
+    border-right: 1px solid #BBBEC3;
+}
+
+ul.form li span {
+    width: 15%;
+    height: 100%;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+    border-right: 1px solid #BBBEC3;
+}
+
+ul.form li input,ul.form li select {
+    margin-left: 5px;
+    width: 180px;
+    height: 20px;
+}
+
+ul.form li div {
+    margin-top: 3px;
+    text-align: center;
+}
+
+ul.form li div input {
+    width: 50px;
+    height: 24px;
+}
+
+.list-container {
+    width: 95%;
+    margin: 15px auto;
+    border: 1px solid #BBBEC3;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.list-container h2 {
+    background-color: #C9E9FF;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1em;
+    color: #404F66;
+}
+
+.list-container h2 label {
+    float: left;
+    padding-left: 15px;
+}
+
+.list-container h2 span {
+    float: right;
+    padding-right: 15px;
+}
+
+table.default {
+    width: 95%;
+    margin: 15px auto;
+    border: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+table.default thead td {
+    height: 25px;
+    border: 1px solid #BBBEC3;
+    color: #404F66;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #C9E9FF;
+}
+
+table.default tbody td {
+    height: 25px;
+    border: 1px solid #BBBEC3;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.default td.left {
+    text-align: left;
+    padding-left: 15px;
+}
+
+table.detail {
+    width: 95%;
+    margin: 15px auto;
+    border: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+table.detail thead td {
+    color: #404F66;
+    vertical-align: middle;
+    background-color: #C9E9FF;
+    font-weight: bold;
+}
+
+table.detail th {
+    width: 15%;
+    height: 25px;
+    border: 1px solid #BBBEC3;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+table.detail td {
+    height: 25px;
+    border: 1px solid #BBBEC3;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+table.detail td.actions {
+    height: 30px;
+    text-align: center;
+}
+
+table.detail td.actions input {
+    width: 80px;
+    height: 25px;
+}
+
+table.pagination {
+    width: 95%;
+    border: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+table.pagination tr td {
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+}
+
+ul.submenu {
+    zoom: 1;
+    margin-top: 30px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+ul.submenu li {
+    float: left;
+    clear: left;
+    margin-top: 15px;
+}
+
+.button_50 {
+    width: 50px;
+    height: 24px;
+}
+
+.input_normal {
+    width: 150px;
+    height: 20px;
+}
+
+label.error {
+    background: url("./img/valid_false.gif") no-repeat scroll 0 0
+        transparent;
+    color: red;
+    margin-left: 3px;
+    padding-left: 16px;
+}

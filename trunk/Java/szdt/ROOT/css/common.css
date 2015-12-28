@@ -1,0 +1,660 @@
+/* ----------------------------------
+
+Main CSS file for Zhaijihui.com
+(C) Komla.眼镜
+http://www.linxiaobo.com
+
+----------------------------------
+
+结构目录：
+   1. reset浏览器默认样式
+   2. 全局样式
+   3. TopNav 样式
+   4. nav 样式
+   5. 底部
+   6. 模块样式
+       
+----------------------------------
+---------------------------------- */
+
+/*reset浏览器默认样式*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, button, input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul,li{
+	list-style: none;
+}
+input, button, textarea{
+	vertical-align:middle;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+a{
+	text-decoration: none;
+	color: #555;
+}
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*全局样式*/
+body {
+	background: #f5f5f5;
+	font: 12px/1.5 tahoma,arial,'microsoft yahei',"\5b8b\4f53";
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cf:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.cf {
+	zoom:1;
+}
+.cl{
+	clear:both;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+.of_h {
+	overflow: hidden;
+}
+.tw {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wrap{
+	width: 1024px;
+	margin: 0 auto;
+}
+/*topnav CSS*/
+.header{
+	position: relative;
+	z-index: 100;
+}
+.topnav{
+	background: #00a13a;
+	line-height: 40px;
+}
+.topnav .fl span{
+	color: #fff;
+}
+.topnav .fr a,.topnav .fr span{
+	margin-left: 10px;
+	color: #fff;
+}
+/*nav CSS*/
+.nav{
+	line-height: 64px;
+	/*background: url(../images/header-bg.png) repeat-x;*/
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+.nav .small-logo{
+	float: left;
+	height: 59px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+.nav ul{
+	float: right
+}
+.nav ul li{
+	float: left;
+	padding: 0 10px;
+}
+.nav ul li a{
+	font-size: 15px;
+	font-weight: bold;
+	cursor:pointer;
+	padding-right: 25px;
+	background: url(../images/sprite-icon-small_normal.png) no-repeat right 0;	
+}
+.nav ul li a:hover,.nav ul li.active a{
+	color: #26a84f;
+	background-image: url(../images/sprite-icon-small_down.png);
+}
+.nav ul li.home a{
+	padding-right: 0;
+	background: none;
+}
+.nav ul .jixie a{
+	background-position: right 0;
+}
+.nav ul .pp a{
+	background-position: right -37px;
+}
+.nav ul .taiqiu a{
+	background-position: right -78px;
+}
+.nav ul .yujia a{
+	background-position: right -118px;
+}
+.nav ul .myyuyue a{
+	background-position: right -157px;
+}
+.nav ul .jiabansq a{
+	background-position: right -191px;
+}
+.nav ul .tushuqd a{
+	background-position: right -227px;
+}
+.bottom-nav{
+	margin-top: 20px;
+	background: #fff;
+	padding:20px 125px;
+	text-align: center;
+}
+.bottom-nav a{
+	padding: 0 15px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #444;
+}
+.bottom-nav a.active,.bottom-nav a:hover{
+	color: #26a84f;
+}
+
+/*containner CSS*/
+.sidebar{
+	width: 204px;
+	float: left;
+	height: 100px;
+}
+.sidebar .inner{
+	padding: 10px 20px;
+/*	position: fixed;*/
+}
+.sidebar .inner .logo{
+	font-size: 0;
+	overflow: hidden;
+}
+.subnav li{
+	line-height: 45px;
+	border-bottom: 1px solid #bab0b1;
+	background-image: url(../images/sprite-icon-big.png);
+	background-repeat: no-repeat;
+}
+.subnav li.jixie{
+	background-position: 100px 10px;
+}
+.subnav li.pp{
+	background-position: 100px -30px;
+}
+.subnav li.taiqiu{
+	background-position: 100px -75px;
+}
+.subnav li.yujia{
+	background-position: 100px -120px;
+}
+.subnav li.last-item{
+	border-bottom: 0 none;
+}
+.subnav li.jiaban{
+	background-position: 100px -167px;
+}
+.subnav li.qingdan{
+	background-position: 100px -211px;
+}
+.subnav li a{
+	font-size: 15px;
+	color: #333;
+	font-weight: bold;
+	-moz-transition: padding-left .5s;
+	-webkit-transition: padding-left .5s;
+	-ms-transition: padding-left .5s;
+	transition: padding-left .5s;
+}
+.subnav li a:hover{
+	color: #26a84f;
+	padding-left: 15px;
+}
+.myorder,.jieyue,.shenqing{
+	text-align: center;
+	background: url(../images/btn-icon.png) no-repeat center 0;
+	height: 100px;
+}
+.jieyue{
+	background: url(../images/library.png) no-repeat center -100px;
+}
+.shenqing{
+	background: url(../images/library.png) no-repeat center 0px;
+}
+.myorder a,.jieyue a,.shenqing a{
+	display: inline-block;
+	height: 55px;
+	width: 152px;
+	/*background: url(../images/btn-icon.png) no-repeat;*/
+}
+.main{
+	background: #fff;
+	width: 790px;
+	float: left;
+	padding: 15px;
+}
+.slider{
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+.slider ul{
+	position: absolute;
+}
+.slider ul li{
+	float: left;
+/*	position: absolute;
+	top: 0;
+	left: 0;*/
+}
+.slider .control-btn{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+.slider .control-btn span{
+	width: 20px;
+	height: 8px;
+	overflow: hidden;
+	background: #fff;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.slider .control-btn span.active{
+	background: #146db2
+}
+.website{
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+	color: #777;
+	margin-top: 30px;
+}
+/*其他页面模块样式*/
+.content{
+	background: #fff;
+	padding: 30px 125px;
+	margin-top: 40px;
+}
+.title h1{
+	font-size: 26px;
+	color: #26a84f;
+}
+.title p{
+	font-size: 16px;
+	padding: 15px 0;
+	text-indent: 30px;
+}
+.jianjie dt,.jianjie dd{
+	float: left;
+	height: 290px;
+	overflow: hidden;	
+}
+.jianjie dt{
+	font-size: 0;
+	width: 400px;
+}
+.jianjie dd{
+	float: left;
+	width: 374px;
+	background: #f5f5f5;
+}
+.jianjie dd p{
+	padding: 20px;
+	text-indent: 30px;
+	font-size: 14px;
+	text-align: justify;
+	color: #555;
+}
+.kecheng{
+	margin: 20px 0;
+}
+.kecheng ul{
+	width: 100%;
+}
+.kecheng ul li{
+	float: left;
+	line-height: 40px;
+	background: #c1c1c1;
+	border-left: 1px solid #fff;
+	text-align: center;
+	color: #fff;
+}
+.kecheng ul li.active{
+	background: #00a13a;
+}
+.kecheng .first,.kecheng ul li{
+	width: 85px;
+}
+.kecheng-box{
+	display: none;
+}
+.kecheng div.active{
+	display: block;
+}
+.fanhui-btn{
+	margin-top: 20px;
+}
+.fanhui-btn span{
+	float: right;
+	background: url(../images/back-btn.png) no-repeat;
+	height: 60px;
+	width: 81px;
+}
+.fanhui-btn a{
+	display: inline-block;
+	height: 36px;
+	width: 81px;
+}
+.fanhui-btn span.shenqing{
+	background-image: url(../images/shenqing.png);
+}
+.zhuyi dl{
+	float: left;
+	width: 250px;
+}
+.zhuyi dl dt,.shixiang h3{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+.zhuyi dl dd,.shixiang{
+	font-size: 14px;
+	line-height: 25px;
+	color: #777;
+	text-align: justify;
+}
+.shixiang{
+	margin-top: 20px;
+}
+.yuyue-box{
+	background: url(../images/order-list.png) no-repeat;
+	padding: 0 10px;
+	_height: 250px;
+	min-height: 250px;
+	margin-top: 30px;
+}
+.yuyue-box h3{
+	line-height: 38px;
+	height: 38px;
+	padding-left: 20px;
+	color: #26a84f;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.yuyue-box h3 span{
+	position: relative;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 10px;
+	bottom: -5px;
+	cursor: pointer;
+}
+.yuyue-box h3 span.active{
+	border: 1px solid #50BD77;
+	border-bottom:1px solid #ecfef2;
+}
+.yuyue-box table td:hover{
+	background: #E0FFEB
+}
+.myyuyue-list a{
+	display: inline-block;
+	background: url(../images/btns.png) no-repeat -110px 0;
+	width: 75px;
+	height: 30px;
+}
+.weiyue-list .first{
+	width: 30%;
+}
+.shenpi h1{
+	line-height: 60px;
+	font-size: 26px;
+	color: #26A84F;
+}
+.shenpi-pic{
+	width: 100%;
+	height: 520px;
+	background: url(../images/liucheng.jpg) no-repeat;
+	display: block;
+}
+.jiabanform .form-horizontal .control-label{
+	width: 60px;
+}
+.jiabanform .form-horizontal .controls{
+	margin-left: 80px;
+}
+.jiabanform textarea{
+	width: 100%;
+	background: #f8f8f8
+}
+
+/*模块样式*/
+.img-txt{
+	padding: 18px;
+	background: #f5f5f5;
+	width: 350px;
+	margin-top: 14px;
+	float: left;
+}
+.img-txt h2{
+	font-size: 15px;
+	line-height: 28px;
+}
+.img-txt p{
+	color: #777;
+	text-align: justify;
+	height: 72px;
+	overflow: hidden;
+}
+.even-item{
+	margin-left: 18px;
+}
+.img-txt .yuyue{
+	text-align: right;
+	height: 60px;
+}
+.img-txt .yuyue span{
+	background: url(../images/btn-icon.png) 0 -110px no-repeat;
+	height: 60px;
+	display: inline-block;
+}
+.img-txt .yuyue span.jbsq{
+	background: url(../images/tushu.png) 0 0px no-repeat;
+}
+.img-txt .yuyue span.tsg{
+	background: url(../images/tushu.png) -130px 0px no-repeat;
+}
+
+
+.img-txt .yuyue a{
+	width: 101px;
+	height: 36px;
+	display: inline-block;
+	
+}
+
+/*选课表格模块*/
+.table{
+	border-style: solid solid solid none;
+	border-width: 1px 1px 1px 0;
+	border-color: #ddd;
+	width: 100%;
+	max-width: 100%;
+}
+.table th,.table td{
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	height: 40px;
+}
+.table td{
+	background: #e0ffeb;
+	text-align: center;
+}
+.table td:hover{
+	background: #ff9922
+}
+.table td.active{
+	background: #fcef9b;
+}
+.table thead th{
+	background: #00a13a;
+	color: #fff;
+}
+.table tbody th{
+	background: #baffd3;
+}
+/*弹窗样式*/
+.light-mask{
+	background:#000;
+	position:absolute;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	width:100%;
+	top:0;
+	z-index:9998;
+}
+.light-box{
+	position: fixed;
+	_position: absolute;
+	width: 377px;
+	top: 200px;
+	left: 50%;
+	margin-left:-187px;
+	height: 228px;
+	border-radius: 8px;
+	background: url(../images/lightBox-bd-bg.png) no-repeat center 0;
+	z-index: 9999;
+}
+.light-box h3{
+	background: url(../images/lightBox-hd-bg.png) no-repeat;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+}
+.light-box span.close,.xieyi span.close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../images/btns.png) no-repeat;
+	width: 43px;
+	height: 35px;
+}
+.light-box .light-box-mian{
+	height: 130px;
+	padding-left: 130px;
+}
+.light-box .light-box-mian .cankao{
+	height: 130px;
+}
+.light-box .light-box-mian span{
+	vertical-align: middle;
+	display: inline-block;
+}
+.light-box-btn{
+	text-align: center;
+}
+.xieyi{
+	position: absolute;
+	top: 180px;
+	z-index: 9999;
+	width: 779px;
+	left: 50%;
+	margin-left: -390px;
+	height: 739px;
+	background: url(../images/lightBox-bd-bg1.png) no-repeat center 0;
+}
+.xieyi h3{
+	line-height: 35px;
+	background: url(../images/lightBox-hd-bg1.png) no-repeat;
+	text-align: center;
+	color: #fff;
+}
+.xieyi-mian{
+	padding: 30px 50px;
+}
+.xieyi-btn{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -85px;
+}
+.xieyi,.light-box,.light-mask{
+	display: none;
+}
+.btn{
+	background: url(../images/btns.png) no-repeat;
+	height: 31px;
+	display: inline-block;
+	margin: 0 10px;
+}
+.ok,.no,.finish{
+	width: 75px;
+}
+.ok{	
+	background-position: 0px -99px;
+}
+.no{
+	background-position: -110px -99px;
+}
+.finish{
+	background-position: -110px -50px;
+}
+.continue{
+	background-position: 0 -50px;
+	width: 101px;
+}
+
+
+
+
+

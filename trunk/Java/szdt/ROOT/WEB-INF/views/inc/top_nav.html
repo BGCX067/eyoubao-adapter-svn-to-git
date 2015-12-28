@@ -1,0 +1,47 @@
+<div class="nav">
+    <div class="wrap cf">
+        <a class="small-logo">
+            <img src="${base}/images/small-logo.png">
+        </a>
+        <ul>
+            <li class="home">
+                <a href="${base}/">首页</a>
+            </li>
+            <#if module?? && "APPARATUS" == module>
+            <li class="jixie active">
+            <#else>
+            <li class="jixie">
+            </#if>
+                <a href="${base}/booking/apparatus.do">器械预约</a>
+            </li>
+            <#if module?? && "PINGPONG" == module>
+            <li class="pp active">
+            <#else>
+            <li class="pp">
+            </#if>
+                <a href="${base}/booking/pingpong.do">乒乓球预约</a>
+            </li>
+            <#if module?? && "BILLIARDS" == module>
+            <li class="taiqiu active">
+            <#else>
+            <li class="taiqiu">
+            </#if>
+                <a href="${base}/booking/billiards.do">台球预约</a>
+            </li>
+            <#if module?? && "YOGA" == module>
+            <li class="yujia active">
+            <#else>
+            <li class="yujia">
+            </#if>
+                <a href="${base}/booking/yoga.do">瑜伽预约</a>
+            </li>
+            <#if module?? && "BOOKING_LIST" == module>
+            <li class="myyuyue active">
+            <#else>
+            <li class="myyuyue">
+            </#if>
+                <a href="${base}/booking/booking_list.do">我的预约</a>
+            </li>
+        </ul>
+    </div>
+</div>

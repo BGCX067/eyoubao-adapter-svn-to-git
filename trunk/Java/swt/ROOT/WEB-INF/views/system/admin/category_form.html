@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${base}/css/global.css" type="text/css" rel="Stylesheet" />
+<script src="${thirdparty}/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function()
+    {
+        <#if modify??>
+        $('#title').empty();
+        $('#title').append('修改分类');
+        $('#id').attr('value', '${data.id!}');
+        $('#name').attr('value', '${data.name!?html}');
+        $('#category_form').attr('action', '${base}/admin/modify_category.do');
+        </#if>
+    });
+</script>
+<title>${system_name}</title>
+</head>
+<body>
+    <form id="category_form" action="${base}/admin/add_category.do" method="post">
+        <input type="hidden" name="category.id" id="id" />
+        <table class="table-detail">
+            <thead>
+                <tr>
+                    <td colspan="2" id="title">新增分类</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>分类名称</th>
+                    <td>
+                        <input type="text" name="category.name" id="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="actions">
+                        <input type="submit" value="确定" />
+                        <input type="button" value="返回" onclick="history.go(-1);" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

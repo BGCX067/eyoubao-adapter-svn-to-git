@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head><#include "inc/global_head.html">
+</head>
+<body>
+    <!--header start-->
+    <#assign module = "APPARATUS" />
+    <#include "inc/column_header.html" />
+    <!--header end-->
+    <!--containner start-->
+    <div class="containner wrap">
+        <div class="content">
+            <div class="title">
+                <h1>器械</h1>
+                <p>器械包括跑步机、单机、杠铃、划船机、臀部训练器等，可以锻炼心肺、力量、协 调性等</p>
+            </div>
+            <dl class="jianjie cf">
+                <dt>
+                    <img src="${base}/images/qixie-banner.jpg">
+                </dt>
+                <dd>
+                    <p>它们的主要功能是：增加臂力：哑铃 握力器 多功能仰卧起坐板
+                        划船器：主要用来增强手臂力量、背阔肌和动作协调能力。
+                        跑步机：主要用以锻炼腿、臀、腰、腹部肌肉及心肺功能。
+                        综合型多功能器：一般都包括扩胸器、引体向上、仰卧推举、仰卧起坐等器械的功能。扩胸器、引体向上、仰卧推举，主要是用来锻炼上肢力量及胸大肌力量；仰卧起坐，主要用来锻炼腰肌群，减少腰腹部多余脂肪。
+                    </p>
+                </dd>
+            </dl>
+            <div class="kecheng">
+                <ul class="cf">
+                    <li class="active">今天</li>
+                    <li>明天</li>
+                    <li>后天</li>
+                </ul>
+                <div class="kecheng-box active">
+                    <@m.booking_table data = data_0 date_interval = 0 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_1 date_interval = 1 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_2 date_interval = 2 />
+                </div>
+            </div>
+            <div class="fanhui-btn cf">
+                <span><a href="javascript:history.go(-1);"></a></span>
+            </div>
+            <div class="zhuyi cf">
+                <dl>
+                    <dt>操作说明</dt>
+                    <dd>
+                        1.黄色表示已被预约<br /> 2.绿色表示设备空闲<br /> 3.预定请点绿色块<br />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>注意事项</dt>
+                    <dd>
+                        1.必须穿运动服装和鞋子<br /> 2.不可以饮酒<br /> 3.不可以携带亲友<br />
+                    </dd>
+                </dl>
+            </div>
+            <#include "inc/rule.html" />
+        </div>
+        <#include "inc/bottom_nav.html" />
+    </div>
+    <!--containner end-->
+    <!--footer start-->
+    <div class="footer"></div>
+    <div class="light-mask"></div>
+    <#include "inc/global_js.html" />
+    <#include "inc/agreement.html" />
+    <!--footer end-->
+    <script type="text/javascript">
+                    var _CurrentTd = null;
+                    var callback = function(rsp)
+                    {
+                        if (rsp.success)
+                        {
+                            $("#divConfirm").hide();
+                            var text = rsp.bookingable ? '可预约 ' : '已预约 ';
+                            
+                            if (rsp.count > 1)
+                            {
+                                text += rsp.records;
+                                text += '/'
+                                text += rsp.count;
+                            }
+
+                            _CurrentTd.text(text);
+
+                            if (!rsp.bookingable)
+                            {
+                                _CurrentTd.addClass("active")
+                            }
+
+                            if (confirm('继续预约？'))
+                            {
+                                window.location = '${base}/booking/treadmill.do'
+                            }
+                        } else
+                        {
+                            alert(rsp.message);
+                        }
+                    }
+
+                    $(".kecheng>ul>li").click(function()
+                    {
+                        var iNum = $(this).index();
+                        $(".kecheng>ul>li").removeClass("active");
+                        $(this).addClass("active");
+                        $(".kecheng-box").removeClass("active");
+                        $(".kecheng-box").eq(iNum).addClass("active");
+                    });
+
+                    //指定时间段打开预计窗口
+                    $(".kecheng-box>table>tbody>tr>td").click(function()
+                    {
+                        _CurrentTd = $(this);
+                        if (!$(this).hasClass("active"))
+                        {
+                            $("#divConfirm").show();
+                        }
+                    });
+                </script>
+</body>
+</html>

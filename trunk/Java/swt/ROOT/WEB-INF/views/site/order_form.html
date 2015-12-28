@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<#import "inc/common.ftl" as c>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${base}/css/site.css" type="text/css" rel="Stylesheet" />
+<link href="${base}/css/global.css" type="text/css" rel="Stylesheet" />
+<script src="${thirdparty}/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function()
+    {
+        
+    });
+</script>
+<title>${system_name}</title>
+</head>
+<body>
+    <#include "inc/header.html" />
+    <div class="container">
+        <form id="order_form" action="${base}/user/order.do" method="post">
+            <table class="table-detail">
+                <thead>
+                    <tr>
+                        <td colspan="2" id="title">生成订单</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>订单详情</th>
+                        <td>
+                            <table class="table-list">
+                                <thead>
+                                    <tr>
+                                        <td>名称</td>
+                                        <td>分类</td>
+                                        <td>店铺</td>
+                                        <td>单价（元）</td>
+                                        <td>数量（份）</td>
+                                        <td>金额（元）</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <#list order.entries as entry>
+                                    <tr>
+                                        <td><input type="hidden" name="orderForm.entries[${entry_index}].cookbookName" value="${entry.cookbookName!?html}" />${entry.cookbookName!?html}</td>
+                                        <td><input type="hidden" name="orderForm.entries[${entry_index}].categoryName" value="${entry.categoryName!?html}" />${entry.categoryName!?html}</td>
+                                        <td><input type="hidden" name="orderForm.entries[${entry_index}].nosheryName" value="${entry.nosheryName!?html}" />${entry.nosheryName!?html}</td>
+                                        <td><input type="hidden" name="orderForm.entries[${entry_index}].price" value="${entry.price!}" />${entry.price!}</td>
+                                        <td><input type="hidden" name="orderForm.entries[${entry_index}].count" value="${entry.count!}" />${entry.count!}</td>
+                                        <td>${(entry.count!0)*(entry.price!0)}</td>
+                                    </tr>
+                                    </#list>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>订单金额</th>
+                        <td><input type="hidden" name="orderForm.amount" value="${order.amount!}"/>${order.amount!}</td>
+                    </tr>
+                    <tr>
+                        <th>付款方式</th>
+                        <td>
+                            <select name="orderForm.payMode">
+                                <option value="0">货到付款</option>
+                                <option value="1">在线支付</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>送餐地址</th>
+                        <td>
+                            <input type="text" name="orderForm.deliverAddress" class="input-xxlarge" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="actions">
+                            <input type="submit" value="确定" />
+                            <input type="button" value="返回" onclick="history.go(-1);" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<#include "inc/global_head.html">
+</head>
+<body>
+    <!--header start-->
+    <#assign module = "PINGPONG" />
+    <#include "inc/column_header.html" />
+    <!--header end-->
+    <!--containner start-->
+    <div class="containner wrap">
+        <div class="content">
+            <div class="title">
+                <h1>乒乓球</h1>
+                <p>两张乒乓球台，可多人预约。乒乓球，中华人民共和国国球，是一种世界流行的球 类体育项目。它的英语官方名称是“table tennis”，意即“桌上网球”。</p>
+            </div>
+            <dl class="jianjie cf">
+                <dt>
+                    <img src="${base}/images/ppq-banner.jpg">
+                </dt>
+                <dd>
+                    <p>比赛以11分为一局（曾经长期实行21分制，最早甚至出现过100分制）采用五局三胜（团体）或七局四胜制（单项）。比赛分团体、单项（男单、女单，男双、女双、混双）。</p>
+                </dd>
+            </dl>
+            <div class="kecheng">
+                <ul class="cf">
+                    <li class="active">今天</li>
+                    <li>明天</li>
+                    <li>后天</li>
+                </ul>
+                <div class="kecheng-box active">
+                    <@m.booking_table data = data_0 date_interval = 0 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_1 date_interval = 1 />
+                </div>
+                <div class="kecheng-box">
+                    <@m.booking_table data = data_2 date_interval = 2 />
+                </div>
+            </div>
+            <div class="fanhui-btn cf">
+                <span>
+                    <a href="javascript:history.go(-1);"></a>
+                </span>
+            </div>
+            <div class="zhuyi cf">
+                <dl>
+                    <dt>操作说明</dt>
+                    <dd>
+                        1.黄色表示已被预约<br /> 2.绿色表示设备空闲<br /> 3.预定请点绿色块<br />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>注意事项</dt>
+                    <dd>
+                        1.必须穿运动服装和鞋子<br /> 2.不可以饮酒<br /> 3.不可以携带亲友<br />
+                    </dd>
+                </dl>
+            </div>
+            <#include "inc/rule.html" />
+        </div>
+        <#include "inc/bottom_nav.html" />
+    </div>
+    <!--containner end-->
+    <!--footer start-->
+    <div class="footer"></div>
+    <!--footer end-->
+    <div class="light-mask"></div>
+    <#include "inc/global_js.html">
+    <#include "inc/agreement.html" />
+    <script type="text/javascript">
+                    var _CurrentTd = null;
+                    
+                    var callback = function(rsp){
+                        if (rsp.success) {
+                            $("#divConfirm").hide();
+                            var text = rsp.bookingable ? '可预约 ' : '已预约 ';
+                            if (rsp.count > 1)
+                            {
+                                text += rsp.records;
+                                text += '/'
+                                text += rsp.count;
+                            }
+                            _CurrentTd.text(text);
+                            
+                            if (!rsp.bookingable)
+                                {
+                                _CurrentTd.addClass("active")
+                                }
+                        } else {
+                            alert(rsp.message);
+                        }
+                    }
+
+                    $(".kecheng>ul>li").click(function()
+                    {
+                        var iNum = $(this).index();
+                        $(".kecheng>ul>li").removeClass("active");
+                        $(this).addClass("active");
+                        $(".kecheng-box").removeClass("active");
+                        $(".kecheng-box").eq(iNum).addClass("active");
+                    })
+
+                    //指定时间段打开预计窗口
+                    $(".kecheng-box>table>tbody>tr>td").click(function()
+                    {
+                        _CurrentTd = $(this);
+                        if (!$(this).hasClass("active")) {
+                            $("#divConfirm").show();
+                        }
+                    });
+				</script>
+</body>
+</html>
